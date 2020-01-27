@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E7109F7723DE0C51002A680B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109F7623DE0C51002A680B /* AppDelegate.swift */; };
-		E7109F7923DE0C51002A680B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109F7823DE0C51002A680B /* SceneDelegate.swift */; };
 		E7109F7B23DE0C51002A680B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109F7A23DE0C51002A680B /* MasterViewController.swift */; };
 		E7109F7D23DE0C51002A680B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7109F7C23DE0C51002A680B /* DetailViewController.swift */; };
 		E7109F8023DE0C51002A680B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7109F7E23DE0C51002A680B /* Main.storyboard */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		E7109F7323DE0C51002A680B /* USGSEarthQuakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USGSEarthQuakes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7109F7623DE0C51002A680B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E7109F7823DE0C51002A680B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E7109F7A23DE0C51002A680B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		E7109F7C23DE0C51002A680B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E7109F7F23DE0C51002A680B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				E7109F9323DE5DF7002A680B /* ViewModels */,
 				E7109F8C23DE1ABB002A680B /* Networking */,
 				E7109F7623DE0C51002A680B /* AppDelegate.swift */,
-				E7109F7823DE0C51002A680B /* SceneDelegate.swift */,
 				E7109F7A23DE0C51002A680B /* MasterViewController.swift */,
 				E7109F7C23DE0C51002A680B /* DetailViewController.swift */,
 				E7109F7E23DE0C51002A680B /* Main.storyboard */,
@@ -189,7 +186,6 @@
 				E7109F9C23DEEAA7002A680B /* UEQFeatureCollection.swift in Sources */,
 				E7109F9623DE5F69002A680B /* UEQFeatureModel.swift in Sources */,
 				E7109F7723DE0C51002A680B /* AppDelegate.swift in Sources */,
-				E7109F7923DE0C51002A680B /* SceneDelegate.swift in Sources */,
 				E7109F7B23DE0C51002A680B /* MasterViewController.swift in Sources */,
 				E7109F7D23DE0C51002A680B /* DetailViewController.swift in Sources */,
 				E7109F9023DE1B40002A680B /* UEQNetwork.swift in Sources */,
@@ -343,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4839ZY53LG;
 				INFOPLIST_FILE = USGSEarthQuakes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4839ZY53LG;
 				INFOPLIST_FILE = USGSEarthQuakes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
