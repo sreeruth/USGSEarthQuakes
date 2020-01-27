@@ -14,13 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if let split = self.window?.rootViewController as? UISplitViewController {
+            split.preferredDisplayMode = .allVisible
+            
+            if let detail = self.window?.rootViewController?.children.last?.children.first as? DetailViewController {
+                split.delegate = detail
+            }
+        }
         return true
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        if let split = self.window?.rootViewController as? UISplitViewController {
-            split.preferredDisplayMode = .allVisible
-        }
+        
     }
 }
 

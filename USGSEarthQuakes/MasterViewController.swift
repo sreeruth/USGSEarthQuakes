@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, UISplitViewControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
     
     private var viewModel: UEQMasterViewModel!
+    var collapseDetailViewController = true
 
 
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class MasterViewController: UITableViewController {
         tableView.dataSource = self
         tableView.prefetchDataSource = self
         if let split = splitViewController {
+            split.delegate = self
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
@@ -66,6 +68,10 @@ class MasterViewController: UITableViewController {
             cell.detailTextLabel!.text = object.properties.title
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        collapseDetailViewController = false
     }
 
 

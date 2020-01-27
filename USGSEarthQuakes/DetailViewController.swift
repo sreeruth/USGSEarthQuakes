@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class DetailViewController: UIViewController, WKNavigationDelegate {
+class DetailViewController: UIViewController, WKNavigationDelegate, UISplitViewControllerDelegate {
 
     @IBOutlet weak var wkWebView: WKWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -24,6 +24,19 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
         if let detail = detailItem, let _ = wkWebView {
             wkWebView.load(URLRequest.init(url: detail))
         }
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController,
+                             collapseSecondary secondaryViewController: UIViewController,
+                             onto primaryViewController: UIViewController) -> Bool
+    {
+        guard let navigationController = primaryViewController as? UINavigationController,
+            let controller = navigationController.topViewController as? MasterViewController
+        else {
+            return false
+        }
+
+        return controller.collapseDetailViewController
     }
 
     override func viewDidLoad() {
